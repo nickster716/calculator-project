@@ -65,3 +65,23 @@ body{
 .calc-button:last-child:hover{
     background-color: #3e92c4;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .calc {
+        width: 90%; /* Adjust calculator width for mobile */
+    }
+
+    .calc-button {
+        width: 22%; /* Make buttons slightly smaller to fit better on smaller screens */
+        font-size: 1.5em; /* Reduce font size for better readability */
+    }
+
+    .calc-row {
+        justify-content: space-evenly; /* Evenly space the buttons */
+    }
+    
+    .screen {
+        font-size: 1.5em; /* Reduce the screen font size on smaller screens */
+    }
+}
