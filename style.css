@@ -4,10 +4,13 @@
 
 body{
     padding:0;
-    margin: 130px;
+    /* margin: 130px; */
+    margin:0;
     display:flex;
     justify-content: center;
-    align-content: space-around;
+    /* align-content: space-around; */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 
     background: #ee9ca7;  /* fallback for old browsers */
     background: linear-gradient(to right, #ffdde1, #ee9ca7); 
@@ -15,7 +18,8 @@ body{
 }
 
 .calc{
-    width:400px;
+    width:100%;
+    max-width: 400px; /* Maximum width for large screens */
     background-color: black;
     color: white;
 }
@@ -66,29 +70,22 @@ body{
     background-color: #3e92c4;
 }
 
-/* Media query for devices smaller than 600px */
+/* Responsive Design */
 @media (max-width: 600px) {
-    body {
-        padding: 0;
-        margin: 0;
-        height: 100%; /* Ensure full height for the calculator */
-    }
-
     .calc {
-        width: 90%; /* Make calculator take up 90% of the screen width */
-        max-width: none; /* Remove max-width for smaller screens */
+        width: 90%; /* Adjust calculator width for mobile */
     }
 
     .calc-button {
-        width: 22%; /* Make buttons smaller to fit */
-        font-size: 1.5em; /* Smaller font size for buttons */
-    }
-
-    .screen {
-        font-size: 1.5em; /* Smaller font size for the screen */
+        width: 22%; /* Make buttons slightly smaller to fit better on smaller screens */
+        font-size: 1.5em; /* Reduce font size for better readability */
     }
 
     .calc-row {
-        justify-content: space-evenly; /* Space buttons evenly */
+        justify-content: space-evenly; /* Evenly space the buttons */
+    }
+    
+    .screen {
+        font-size: 1.5em; /* Reduce the screen font size on smaller screens */
     }
 }
